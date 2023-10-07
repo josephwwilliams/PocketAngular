@@ -4,16 +4,16 @@ import { PocketClient } from '../../core/services/http';
 
 export interface User {
   id: number;
-  name: { first: string; last: string };
+  name: string;
 }
 
-export interface APIResponse {
-  users: APIUser[];
+export interface CreateUser {
+  name: string;
 }
 
 export interface APIUser {
   id: number;
-  firstName: string;
+  name: string;
 }
 
 @PI({
@@ -32,6 +32,10 @@ export class UserService {
     return this._usersSubject;
   }
 
+  createUser(user: CreateUser) {
+    return this.http.post<APIUser>('http://localhost:3000/users/create', user);
+  }
+
   addUser(user: User) {
     this._users.push(user);
     this._usersSubject.next(this._users);
@@ -46,6 +50,6 @@ export class UserService {
   }
 
   getUsers() {
-    return this.http.get<APIResponse[]>('https://dummyjson.com/users');
+    return this.http.get<APIUser[]>('http://localhost:3000/users');
   }
 }

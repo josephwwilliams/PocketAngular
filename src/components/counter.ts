@@ -7,7 +7,7 @@ import { PC } from '../core/files/component';
   <section class="p-4 border border-green-500 bg-green-200/30 rounded">
       <button 
         id="click" 
-        class="px-4 py-2 border-b-2 border-green-600 bg-green-500 rounded-md text-white hover:scale-105 transition-all duration-200 ease-in-out"
+        class="font-semibold px-4 py-2 border-b-2 border-green-600 bg-green-500 rounded-md text-white hover:scale-105 transition-all duration-200 ease-in-out"
       >
       Count: {{count}}
       </button>
