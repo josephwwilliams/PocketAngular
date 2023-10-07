@@ -7,6 +7,10 @@ export interface User {
   name: { first: string; last: string };
 }
 
+export interface APIResponse {
+  users: APIUser[];
+}
+
 export interface APIUser {
   id: number;
   firstName: string;
@@ -42,6 +46,6 @@ export class UserService {
   }
 
   getUsers() {
-    return this.http.get<APIUser[]>('https://dummyjson.com/users');
+    return this.http.get<APIResponse[]>('https://dummyjson.com/users');
   }
 }

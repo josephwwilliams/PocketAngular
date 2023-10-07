@@ -15,7 +15,7 @@ export class PocketClient {
           return response.json();
         })
         .then((data) => {
-          observer.next(data.users);
+          observer.next(data);
           // @ts-ignore
           observer.complete();
         })

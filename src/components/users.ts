@@ -24,7 +24,7 @@ export class UsersComponent {
           setTimeout(() => {
             PD.query('#users-container').innerText =
               'This data is from: https://dummyjson.com/users';
-            PD.forLoop(data.slice(0, 5), '#users-container', 'firstName');
+            PD.forLoop(data.users.slice(0, 5), '#users-container', 'firstName');
           }, 2000);
         });
       },
