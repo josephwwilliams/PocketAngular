@@ -8,7 +8,7 @@ Run `yarn` to install dependencies.
 
 ## Development
 
-Run `yarn start` for a dev server. Navigate to `http://localhost:5173/`.
+Run `yarn dev` for a dev server. Navigate to `http://localhost:5173/`.
 
 ## Build
 
